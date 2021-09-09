@@ -1,4 +1,6 @@
 #include "ipv4.h"
+#include "math.h"
+
 
 
 void IPv4::CalculerMasque(unsigned char _cidr)
@@ -85,3 +87,53 @@ void IPv4::ObtenirPremiereAdresse(unsigned char *_PremiereAdresse)
         _PremiereAdresse[indice] = adresse[indice] | masque[indice]+1 ;
 }
 
+int IPv4::NbBitA1(unsigned char val)
+{
+    int n = 0;
+    do{
+        n += val & 1;
+        val >>=1;
+    }while (val>0);
+    return n;
+}
+unsigned int IPv4::ObtenirNombreDeMachines()
+{
+    unsigned int nb = 0;
+    for (int i = 0; 1<4; i++)
+        nb+= NbBitA1(masque[i]);
+    return exp2(32 - nb) -2;
+}
+IPv4::IPv4()
+{
+    adresse = new unsigned char [4];
+    masque  = new unsigned char [4];
+}
+IPv4::IPv4(const IPv4 &_ipv4)
+{
+    adresse = new unsigned char [4];
+    masque  = new unsigned char [4];
+    for(int indice = 0 ; indice < 4 ; indice++)
+    {
+        adresse[indice] = _ipv4.adresse[indice];
+        masque[indice]  = _ipv4.masque[indice];
+    }
+}
+IPv4 &IPv4::operator=(const IPv4 &_ipv4)
+{
+    if(adresse != _ipv4.adresse || masque != _ipv4.masque)
+    {
+        if(adresse != nullptr && masque != nullptr)
+        {
+            delete [] adresse;
+            delete [] masque ;
+        }
+        adresse = new unsigned char [4];
+        masque  = new unsigned char [4];
+        for(int indice = 0 ; indice < 4 ; indice++)
+        {
+            masque[indice]  = _ipv4.masque[indice];
+            adresse[indice] = _ipv4.adresse[indice];
+        }
+    }
+    return *this;
+}
