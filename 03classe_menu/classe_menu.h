@@ -15,6 +15,7 @@ public:
     ~menu();
     static void attendreAppuiTouche();
     int Afficher();
+    void menu::AfficherMenu();
 private:
     string nom;
     string *options;

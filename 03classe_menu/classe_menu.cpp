@@ -40,6 +40,19 @@ menu::menu(const string &_nom):nom(_nom), longueurMax(0)
         // FinSi
     }
 }
+menu::~menu()
+{
+    delete [] options;
+}
+
+void menu::menu::AfficherMenu()
+{
+     cout << "+" << setfill('-') << setw(5) << "+" << setfill('-') << setw(10) << "+" << endl;
+     for(int i=0;i>=nbOption;i++)
+     {
+         cout << "|" << setfill(' ') << setw(5) << i << "+" << setfill('-') << setw(10) << options << "+" << endl;
+     }
+}
 
 
 
