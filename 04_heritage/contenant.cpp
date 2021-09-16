@@ -1,20 +1,20 @@
 #include "contenant.h"
 #include <iostream>
-#define CONTENANT_H
+
 using namespace std;
 
+Contenant::Contenant(const int _largeur, const int _hauteur, const int _profondeur):
 
-class Contenant
+    largeur(_largeur),
+    hauteur(_hauteur),
+    profondeur(_profondeur)
 {
-public:
-    Contenant(const int _largeur, const int _hauteur, const int _profondeur);
-    int CalculerVolume();
-protected:
-    int largeur;
-    int hauteur;
-    int profondeur;
-};
-#endif // CONTENANT_H
+    cout << "constructeur de la classe Contenant" << endl ;
+}
+int Contenant::CalculerVolume()
+{
+    return largeur * hauteur * profondeur ;
+}
 
 Contenant::~Contenant()
 {
