@@ -4,16 +4,21 @@
 
 using namespace std;
 
-class barres
+class Barre
 {
+
 public:
-    barres();
-    ~barres();
-    private:
+    Barre(const string _reference,const double _longueur,const double _densite,const string _nomAlliage);
+    ~Barre();
+     void AfficherCaracteristiques();
+protected:
     string reference;
-    int longueur;
-    int densite;
+    double longueur;
+    double densite;
     string nomAlliage;
+
 };
+
+
 
 #endif // BARRES_H

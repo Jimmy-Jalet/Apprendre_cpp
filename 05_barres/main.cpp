@@ -1,8 +1,10 @@
-#include <QCoreApplication>
+#include <iostream>
+#include "barres.h"
 
-int main(int argc, char *argv[])
+using namespace std;
+
+int main()
 {
-    QCoreApplication a(argc, argv);
-
-    return a.exec();
+Barre Barre1("abcd",2,3,"metal");
+Barre1.AfficherCaracteristiques();
 }
