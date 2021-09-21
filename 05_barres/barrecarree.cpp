@@ -8,3 +8,8 @@ BarreCarree::~BarreCarree()
 {
     cout<< "Destructeur de la classe BarreCarree"<< endl;
 }
+
+double BarreCarree::CalculerSection()
+{
+    return cote * cote ;
+}

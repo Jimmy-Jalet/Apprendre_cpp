@@ -9,3 +9,8 @@ BarreRectangle::~BarreRectangle()
 {
     cout<< "Destructeur de la classe BarreRectangle"<< endl;
 }
+
+double BarreRectangle::CalculerSection()
+{
+    return hauteur * largeur ;
+}
