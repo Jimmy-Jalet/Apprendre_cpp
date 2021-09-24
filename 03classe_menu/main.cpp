@@ -12,7 +12,7 @@ enum CHOIX_MENU
     OPTION_3,
     OPTION_4,
     QUITTER
-}
+};
 
 void menu::AttendreAppuiTouche()
 {
