@@ -1,6 +1,6 @@
 #ifndef CODEUR_H
 #define CODEUR_H
-#include "MccUldaq.h"
+#include "mcculdaq.h"
 
 class Codeur
 {

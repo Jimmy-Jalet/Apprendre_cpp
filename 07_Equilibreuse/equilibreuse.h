@@ -1,7 +1,7 @@
 #ifndef EQUILIBREUSE_H
 #define EQUILIBREUSE_H
 #include "moteur.h"
-#include "MccUldaq.h"
+#include "mcculdaq.h"
 
 class Equilibreuse
 {
