@@ -17,6 +17,6 @@ int main()
 //    BarreCarree Barre2("dcba",2,2,"metal",4);
 //    Barre1.AfficherCaracteristiques();
 //    Barre2.AfficherCaracteristiques();
-    Catalogue catalogue1(10);
+    Catalogue catalogue1;
 
 }
