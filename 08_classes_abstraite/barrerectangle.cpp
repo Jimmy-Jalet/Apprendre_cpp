@@ -12,5 +12,5 @@ BarreRectangle::~BarreRectangle()
 
 double BarreRectangle::CalculerSection()
 {
-    return hauteur * largeur ;
+    return hauteur *largeur ;
 }

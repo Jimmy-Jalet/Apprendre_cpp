@@ -13,6 +13,11 @@ Trajectoire::~Trajectoire()
 
 }
 
+bool Trajectoire::Ajouter(const Element *_Ajouter)
+{
+
+}
+
 void Trajectoire::Afficher()
 {
     cout << "Trajectoire: " << endl;
