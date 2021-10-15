@@ -7,7 +7,7 @@ Segment::Segment(const double _longeur, const double _angle,const int _numero, i
     longueur(_longeur),
     angle(_angle)
 {
-
+setNumero(_numero);
 }
 
 void Segment::Afficher()
