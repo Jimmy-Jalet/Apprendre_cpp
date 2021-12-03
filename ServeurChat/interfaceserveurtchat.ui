@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>InterfaceServeurTchat</string>
   </property>
-  <widget class="QWidget" name="">
+  <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -80,12 +80,12 @@
    <slot>close()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>418</x>
-     <y>284</y>
+     <x>174</x>
+     <y>58</y>
     </hint>
     <hint type="destinationlabel">
-     <x>422</x>
-     <y>357</y>
+     <x>775</x>
+     <y>136</y>
     </hint>
    </hints>
   </connection>
